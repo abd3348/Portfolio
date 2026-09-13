@@ -6,47 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Document</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="css.css" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
 
-        <div class="container d-flex align-items-center">
+    <div class="container d-flex align-items-center">
 
-            <a class="navbar-brand text-white fw-bold" href="html.html">
-                AMDEV
-            </a>
+        <!-- Logo -->
+        <a class="navbar-brand text-white fw-bold" href="html.html">
+            AMDEV
+        </a>
 
-            <div class="d-flex flex-wrap justify-content-center gap-2">
+        <!-- Menu Button -->
+         <br>
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
 
-                <a class="text-white fw-bold nav-link-custom" href="#Aboutus">
-                    About Me
-                </a>
+        </button>
 
-                <a class="text-white fw-bold nav-link-custom" href="#skills">
-                    Skills
-                </a>
+        <!-- Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
 
-                <a class="text-white fw-bold nav-link-custom" href="#projects">
-                    Projects
-                </a>
+            <div class="d-flex flex-column flex-lg-row gap-2">
 
-                <a class="text-white fw-bold nav-link-custom" href="#ContactMe">
-                    Contact Me
-                </a>
+        <a class="text-white fw-bold nav-link-custom" href="#Aboutus">
+            About Me
+        </a>
 
-            </div>
+        <a class="text-white fw-bold nav-link-custom" href="#skills">
+            Skills
+        </a>
 
-        </div>
+        <a class="text-white fw-bold nav-link-custom" href="#projects">
+            Projects
+        </a>
 
-    </nav>
+        <a class="text-white fw-bold nav-link-custom" href="#ContactMe">
+            Contact Me
+        </a>
+
+    </div>
+
+</div>
+
+    </div>
+
+</nav>
 
 
     <div class="main1" id="Aboutus">
@@ -398,6 +415,5 @@
     </div>
 
 </footer>
-</div>
 </body>
 </html>
