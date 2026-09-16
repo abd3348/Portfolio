@@ -52,7 +52,7 @@ nav {
             rgba(23, 23, 23, 0.65)),
         url("images.jpg");
 
-    min-height: 80vh;
+    min-height: 90vh;
 
     background-size: cover;
     background-position: center;
@@ -147,7 +147,6 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     min-height: 80vh;
-    margin-top: 1%;
     padding: 80px 20px;
     display: flex;
     justify-content: center;
@@ -402,16 +401,16 @@ nav {
 .main3>h2 {
     font-size: 35px;
 
-    margin: 0;
+    margin-bottom: 2%;
 }
 
 .experience-cards {
-    display: flex;
+    display: grid;
 
-    flex-direction: row;
+    grid-template-columns: repeat(3,1fr);
 
     justify-content: center;
-
+    align-items: center;
     gap: 25px;
 
     width: 100%;
@@ -420,6 +419,7 @@ nav {
 }
 
 .sup2 {
+    
     background-color: #FFFFFF;
 
     box-shadow: 5px 5px 0px #F97316;
@@ -427,8 +427,7 @@ nav {
     border: 3px solid #171717;
 
     border-radius: 20px;
-
-    width: 33.33%;
+    width: 100%;
 
     min-height: 320px;
 
@@ -456,17 +455,21 @@ nav {
 }
 
 .sup2 h4 {
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 
     color: #F97316;
 }
 
 .sup2 p {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 
     font-weight: bold;
 
     color: #737373;
+}
+
+.sup2 img{
+    align-self: center;
 }
 
 .main4 {
@@ -526,24 +529,26 @@ nav {
 }
 
 .skills-list {
-    display: flex;
-
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
 
     justify-content: center;
 
     gap: 15px;
 }
 
+
 .skill {
     border: 2px solid #171717;
-
+    text-align: center;
+    align-content: center;
+    align-items: center;
     border-radius: 10px;
-
-    padding: 10px 18px;
+    min-height: 50px;
+    padding: 5px;
 
     background-color: #FFEDD5;
-
+    font-size: medium;
     font-weight: bold;
 
     transition: 0.4s;
@@ -650,14 +655,20 @@ nav {
 }
 
 .projectbody div a{
-    color: white;
-    background-color: #F97316;
-    padding: 3px;
-    width: 3%;
+    color: black;
+    font-weight: bold;
+    background-color: #FFEDD5 ;
+    padding: 10px;
     border-radius: 5px;
     text-decoration: none;
-    border: black solid 3px ;
+    border: black solid 2px ;
+    transition: 0.4s;
 }
+
+.projectbody div a:hover{
+    background-color: #F97316;
+}
+
 
 .whiteheader {
     color: white !important;
@@ -682,19 +693,23 @@ footer a:hover {
 }
 
 .references-section {
-    margin-top: 1%;
 
     background-color: #FFF7ED;
 
-    min-height: 80vh;
+    min-height: 70vh;
 
     display: flex;
 
     flex-direction: column;
 
-    align-items: center;
-
+    align-items: start;
+    text-align: center;
     padding: 70px 20px;
+}
+
+.references-section h1{
+
+    padding-left: 43%
 }
 
 .references-container {
@@ -703,16 +718,15 @@ footer a:hover {
     max-width: 950px;
 
     display: flex;
-
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: start;
 
     gap: 25px;
 }
 
 .reference-card {
     width: 100%;
-
+    min-height: 300px;
     background-color: white;
 
     border: 2px solid #222;
@@ -805,20 +819,42 @@ footer a:hover {
 }
 
 
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+
+/* =========================================
+   TABLET / SMALL LAPTOP
+   769px - 1279px
+========================================= */
+
 @media (min-width: 769px) and (max-width: 1279px) {
 
+    /* HERO */
     .main1 {
         margin-top: 100px;
+        min-height: 80vh;
+        gap: 30px;
+        padding: 30px;
     }
 
-    .main1>div {
+    .main1 > div {
         width: 45%;
-
         height: 450px;
+        min-height: 450px;
     }
 
+    .main1 .text1 {
+        padding: 25px;
+    }
+
+    /* QUALIFICATIONS */
     .experience-cards {
-        gap: 15px;
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        gap: 20px;
     }
 
     .sup2 {
@@ -828,87 +864,99 @@ footer a:hover {
     .sup2 h3 {
         font-size: 20px;
     }
+
+    /* SKILLS */
+    .skills-container {
+        width: 90%;
+    }
+
+    .skills-section {
+        width: 50%;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* PROJECTS */
+    .project-card {
+        width: 45%;
+        min-width: 350px;
+    }
+
+    /* REFERENCES */
+    .references-section {
+        align-items: center;
+    }
+
+    .references-section h1 {
+        padding-left: 0;
+    }
+
+    .references-container {
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reference-card {
+        width: 100%;
+    }
 }
+
+
+/* =========================================
+   TABLET
+   481px - 768px
+========================================= */
 
 @media (min-width: 481px) and (max-width: 768px) {
 
+    /* NAVBAR */
     nav {
         padding: 10px 0 !important;
     }
 
+    /* HERO */
     .main1 {
-        margin-top: 150px;
-
+        margin-top: 100px;
+        min-height: auto;
         flex-direction: column;
-
-        height: auto;
-
-        padding: 30px 20px;
+        gap: 30px;
+        padding: 40px 20px;
     }
 
-    .main1>div {
+    .main1 > div {
         width: 90%;
-
         height: 400px;
+        min-height: 400px;
     }
 
     .main1 .text1 {
         height: auto;
-
         min-height: 0;
+        padding: 30px;
+        border-left: none;
+        border-top: 5px solid white;
     }
 
-    .experience-cards {
-        flex-direction: column;
-
-        align-items: center;
+    .main1 .text1 h2 {
+        font-size: 30px;
     }
 
-    .sup2 {
-        width: 80%;
+    .main1 .text1 h3 {
+        font-size: 20px;
     }
 
-    .skills-container {
-        flex-direction: column;
-    }
-
-    .skills-section {
-        width: 90%;
-    }
-
-    .projects {
-        padding: 40px 15px;
-    }
-
-    .prodiv {
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-    }
-
-    .project-card {
-        width: 95%;
-    }
-
-    .projectbody img {
-        height: 250px;
-    }
-
-    .projectbody div {
-        text-align: left;
-    }
-
+    /* ABOUT */
     .about-section {
         padding: 50px 20px;
     }
 
     .about-container {
         flex-direction: column;
-
-        gap: 35px;
-
+        gap: 30px;
         padding: 35px 25px;
-
         text-align: center;
     }
 
@@ -932,111 +980,292 @@ footer a:hover {
         justify-content: center;
     }
 
+    /* EXPERIENCE */
+    .experience-timeline {
+        width: 95%;
+        margin-left: 0;
+    }
+
+    .experience-date {
+        width: 80px;
+        padding-right: 15px;
+        font-size: 18px;
+    }
+
+    .experience-content {
+        padding-left: 20px;
+    }
+
+    .experience-card h3 {
+        font-size: 20px;
+    }
+
+    /* QUALIFICATIONS */
+    .experience-cards {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        gap: 20px;
+    }
+
+    .sup2 {
+        width: 100%;
+    }
+
+    /* SKILLS */
+    .skills-container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .skills-section {
+        width: 100%;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* PROJECTS */
+    .projects {
+        padding: 40px 15px;
+    }
+
+    .prodiv {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+
+    .projectbody img {
+        height: 250px;
+    }
+
+    /* REFERENCES */
     .references-section {
+        align-items: center;
         padding: 50px 15px;
     }
 
-    .references-section>h2 {
-        font-size: 32px;
+    .references-section h1 {
+        padding-left: 0;
+    }
 
-        margin-bottom: 30px;
+    .references-container {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
     }
 
     .reference-card {
-        padding: 25px 20px;
-        width: 300px;
-    }
-
-    .reference-card h3 {
-        font-size: 22px;
-    }
-
-    .reference-card h4 {
-        font-size: 17px;
+        width: 100%;
     }
 
     .reference-contact {
         flex-direction: column;
-
         gap: 10px;
     }
 }
 
+
+/* =========================================
+   MOBILE
+   0px - 480px
+========================================= */
+
 @media (max-width: 480px) {
 
+    /* NAVBAR */
     nav {
         padding: 8px 0 !important;
     }
 
-    .nav-link-custom {
-        padding: 5px 7px;
+    .navbar-brand {
+        font-size: 18px;
+    }
 
+    .nav-link-custom {
+        padding: 6px 8px;
         font-size: 13px;
     }
 
-    .main1 {
-        margin-top: 180px;
-
-        flex-direction: column;
-
-        height: auto;
-
-        padding: 20px 10px;
+    .navbar-collapse {
+        margin-top: 10px;
     }
 
-    .main1>div {
-        width: 95%;
+    /* HERO */
+    .main1 {
+        margin-top: 100px;
+        min-height: auto;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 10px;
+    }
 
-        height: 300px;
+    .main1 > div {
+        width: 95%;
+        height: auto;
+        min-height: 0;
+        padding: 20px;
+    }
+
+    .main1 div img {
+        width: 280px;
+        height: 280px;
     }
 
     .main1 .text1 {
         height: auto;
-
         min-height: 0;
-
         padding: 20px;
+        border-left: none;
+        border-top: 4px solid white;
     }
 
     .main1 .text1 h2 {
-        font-size: 22px;
+        font-size: 23px;
+        text-align: center;
     }
 
-    .main1 .text1 p {
+    .main1 .text1 h3 {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .main1 .text1 > div {
+        width: 70%;
+    }
+
+    /* ABOUT */
+    .about-section {
+        padding: 40px 10px;
+    }
+
+    .about-container {
+        padding: 30px 18px;
+        border-radius: 18px;
+        box-shadow: 4px 4px 0 #171717;
+        text-align: center;
+    }
+
+    .about-content h2 {
+        font-size: 25px;
+    }
+
+    .about-content h3 {
+        font-size: 17px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .about-info {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .about-info div {
+        justify-content: center;
+    }
+
+    /* EXPERIENCE */
+    .main2 {
+        padding: 40px 15px;
+        gap: 30px;
+    }
+
+    .experience-timeline {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .experience-row {
+        align-items: flex-start;
+    }
+
+    .experience-date {
+        width: 55px;
+        padding-right: 10px;
+        font-size: 15px;
+    }
+
+    .experience-dot {
+        width: 10px;
+        height: 10px;
+        flex-shrink: 0;
+    }
+
+    .experience-content {
+        padding-left: 15px;
+        padding-bottom: 20px;
+    }
+
+    .experience-card {
+        padding: 15px;
+    }
+
+    .experience-card h3 {
+        font-size: 18px;
+    }
+
+    .experience-card h4 {
+        font-size: 16px;
+    }
+
+    .experience-card li {
         font-size: 14px;
     }
 
-    .main1 div img {
-        width: 300px;
-        height: 300px;
-    }
-
-    .main2 {
-        padding: 40px 15px;
+    /* QUALIFICATIONS */
+    .main3 {
+        padding: 50px 15px;
     }
 
     .experience-cards {
-        flex-direction: column;
-
-        align-items: center;
+        grid-template-columns: 1fr;
+        width: 95%;
+        gap: 20px;
     }
 
     .sup2 {
-        width: 95%;
-
+        width: 100%;
         min-height: auto;
+        padding: 25px 15px;
+    }
+
+    /* SKILLS */
+    .main4 {
+        padding: 40px 15px;
     }
 
     .skills-container {
         flex-direction: column;
+        width: 95%;
     }
 
     .skills-section {
-        width: 90%;
+        width: 100%;
+        padding: 20px 15px;
     }
 
+    .skills-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .skill {
+        font-size: 14px;
+        min-height: 45px;
+    }
+
+    /* PROJECTS */
     .projects {
-        padding: 40px 15px;
+        padding: 40px 10px;
     }
 
     .prodiv {
@@ -1049,86 +1278,75 @@ footer a:hover {
         width: 95%;
     }
 
+    .projectbody {
+        padding: 0 15px 20px;
+    }
+
     .projectbody img {
-        height: 250px;
+        height: 200px;
     }
 
     .projectbody div {
+        padding-top: 15px;
         text-align: left;
     }
 
-
-    /* ABOUT */
-
-    .about-section {
-        padding: 40px 10px;
-    }
-
-    .about-container {
-        padding: 30px 18px;
-
-        border-radius: 18px;
-
-        box-shadow: 4px 4px 0px #171717;
-    }
-
-    .about-content h2 {
-        font-size: 26px;
-    }
-
-    .about-content h3 {
-        font-size: 17px;
-    }
-
-    .about-content p {
+    .projectbody p {
         font-size: 14px;
-
         line-height: 1.6;
     }
 
-    .about-info {
-        flex-direction: column;
-
-        align-items: stretch;
-    }
-
-    .about-info div {
-        justify-content: center;
-    }
-
-    .about-btn {
-        width: 100%;
-    }
-
+    /* REFERENCES */
     .references-section {
         padding: 50px 15px;
+        align-items: center;
     }
 
-    .references-section>h2 {
-        font-size: 32px;
+    .references-section h1 {
+        padding-left: 0;
+    }
 
-        margin-bottom: 30px;
+    .references-container {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
     }
 
     .reference-card {
+        width: 100%;
+        min-height: auto;
         padding: 25px 20px;
-        width: 300px;
     }
 
     .reference-card h3 {
-        font-size: 22px;
+        font-size: 21px;
     }
 
     .reference-card h4 {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .reference-contact {
         flex-direction: column;
-
         gap: 10px;
     }
+
+    .reference-contact p {
+        font-size: 14px;
+        word-break: break-word;
+    }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+    }
 }
+
+
+/* =========================================
+   NAVBAR COLLAPSE
+   Under 992px
+========================================= */
 
 @media (max-width: 991px) {
 
